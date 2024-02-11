@@ -1,0 +1,212 @@
+{
+  "uuid": "6d872314-4ece-4282-a2d8-39f32fdc7c71",
+  "lastMigration": 32,
+  "name": "Mockapi",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3003,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "850c5f0c-511f-4d51-a851-96343e3ed7d4",
+      "type": "http",
+      "documentation": "base url",
+      "method": "get",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "984ecdd9-9c46-411a-99f8-23ae8da95f1f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "e3ae8bcc-50bb-4933-ad4b-01624cbe0d97",
+      "type": "http",
+      "documentation": "login",
+      "method": "post",
+      "endpoint": "login",
+      "responses": [
+        {
+          "uuid": "e1fca229-8fdc-43db-ba81-6f429e1c3c46",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "3f36bee6-e725-4508-8cd5-c12e07db4269",
+      "type": "http",
+      "documentation": "items",
+      "method": "get",
+      "endpoint": "items",
+      "responses": [
+        {
+          "uuid": "179c0802-0b87-4a15-8bbe-11381b071bca",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "2f5658ec-7708-4df4-97ff-3408df556e0e",
+      "type": "http",
+      "documentation": "items",
+      "method": "get",
+      "endpoint": "items/{id}",
+      "responses": [
+        {
+          "uuid": "299e5491-29b0-4292-8e12-247c86c154d4",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "6d44d53f-d1b4-4814-8f65-d725ad05560c",
+      "type": "http",
+      "documentation": "items",
+      "method": "post",
+      "endpoint": "items/{id}",
+      "responses": [
+        {
+          "uuid": "59448d72-3d97-4328-9ef4-6ee038a8aa11",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "850c5f0c-511f-4d51-a851-96343e3ed7d4"
+    },
+    {
+      "type": "route",
+      "uuid": "e3ae8bcc-50bb-4933-ad4b-01624cbe0d97"
+    },
+    {
+      "type": "route",
+      "uuid": "3f36bee6-e725-4508-8cd5-c12e07db4269"
+    },
+    {
+      "type": "route",
+      "uuid": "2f5658ec-7708-4df4-97ff-3408df556e0e"
+    },
+    {
+      "type": "route",
+      "uuid": "6d44d53f-d1b4-4814-8f65-d725ad05560c"
+    }
+  ],
+  "proxyMode": true,
+  "proxyHost": "http://fakestoreapi.com",
+  "proxyRemovePrefix": true,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}

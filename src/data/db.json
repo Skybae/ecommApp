@@ -1,0 +1,142 @@
+{
+  "admins": [
+    {
+      "name": "Anil Sidhu",
+      "email": "anil@seller.com",
+      "password": "abc@123",
+      "id": 1
+    },
+    {
+      "name": "Renu Sidhu",
+      "email": "renu@seller.com",
+      "password": "abc@123",
+      "id": 2
+    },
+    {
+      "name": "Sheetal",
+      "password": "abc@123",
+      "email": "sheetal@seller.com",
+      "id": 3
+    },
+    {
+      "name": "Komal",
+      "password": "abc@123",
+      "email": "komal@seller.com",
+      "id": 4
+    },
+    {
+      "name": "Komal",
+      "password": "abc@123",
+      "email": "komal@seller.com",
+      "id": 5
+    },
+    {
+      "name": "Disha",
+      "password": "abc@123",
+      "email": "disha@seller.com",
+      "id": 6
+    },
+    {
+      "name": "alexa",
+      "password": "abc@123",
+      "email": "alexa@seller.com",
+      "id": 7
+    }
+  ],
+  "product": [
+    {
+      "name": "iphone charger",
+      "price": "5000",
+      "color": "white",
+      "category": "charger",
+      "description": "Iphone Charger with adapter",
+      "imageUrl": "data:image/jpeg;base64,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",
+      "id": 6
+    },
+    {
+      "name": "iphone 15",
+      "price": "100000",
+      "color": "black",
+      "category": "phone",
+      "description": "an iphone product",
+      "imageUrl": "data:image/jpeg;base64,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",
+      "id": 8
+    },
+    {
+      "name": "samsung",
+      "description": "smartphone",
+      "price": 5000,
+      "imageUrl": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW9iaWxlJTIwcGhvbmV8ZW58MHx8MHx8fDA%3D",
+      "id": 10
+    },
+    {
+      "name": "smartphone",
+      "description": "new phone",
+      "price": 4500,
+      "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": 11
+    },
+    {
+      "name": "samsung",
+      "description": "sc",
+      "price": 23,
+      "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": 12
+    },
+    {
+      "name": "sdkjfd",
+      "description": "dfdfd",
+      "price": 3434,
+      "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": 13
+    },
+    {
+      "name": "laptop",
+      "description": "sdfd",
+      "price": 3434,
+      "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": 14
+    },
+    {
+      "name": "dfdf",
+      "description": "laptop",
+      "price": 4343,
+      "imageUrl": "https://images.unsplash.com/photo-1480694313141-fce5e697ee25?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": 15
+    },
+    {
+      "name": "phone",
+      "description": "dfdsf",
+      "price": 3434,
+      "imageUrl": "https://images.unsplash.com/photo-1505156868547-9b49f4df4e04?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D",
+      "id": 16
+    }
+  ],
+  "users": [
+    {
+      "name": "Sheetal ",
+      "email": "sheetal@user.com",
+      "password": "abc@123",
+      "id": 1
+    },
+    {
+      "name": "pooja",
+      "email": "pooja@user.com",
+      "password": "abc@123",
+      "id": 2
+    },
+    {
+      "name": "Priya",
+      "email": "priya@user.com",
+      "password": "abc@123",
+      "id": 3
+    },
+    {
+      "name": "pankaj",
+      "email": "pankaj@user.com",
+      "password": "abc@123",
+      "id": 4
+    }
+  ],
+  "cart": []
+}
