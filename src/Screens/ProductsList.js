@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { View, Text } from "react-native";
-import { Button, FlatList, Platform, StyleSheet, TextInput } from "react-native-web";
+import {
+  Button,
+  FlatList,
+  Platform,
+  StyleSheet,
+  TextInput,
+} from "react-native-web";
 import Product from "../Components/Product";
 import { useFocusEffect } from "@react-navigation/native";
+import withNetworkConnectivity from "./withNetworkConnectivity";
 
 const ProductList = ({ navigation, route }) => {
-  const { userType } = route.params;
-  const [products, setProducts] = useState([]);
+  const userType = route.params?.userType || "user";
+    const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleEdit = async (productId) => {
-    // Navigate to the edit screen passing productId
     navigation.navigate("EditProduct", { productId });
   };
 
@@ -35,7 +41,7 @@ const ProductList = ({ navigation, route }) => {
   );
 
   const handleDelete = async (productId) => {
-    const confirmed = confirm("Are you sure you want to delete this product?");
+    const confirmed = alert("Are you sure you want to delete this product?");
 
     if (confirmed) {
       try {
@@ -68,39 +74,51 @@ const ProductList = ({ navigation, route }) => {
   function renderProduct({ item: product }) {
     return (
       <View style={styles.productContainer}>
+        <Product
+          style={styles.productItem}
+          {...product}
+          onPress={() => {
+            if (userType === "user") {
+              navigation.navigate("ProductDetails", {
+                productId: product.id,
+              });
+            }
+          }}
+        />
         {userType === "admin" && (
           <>
-            <View style={styles.adminActions}>
-              <Button title="Edit" onPress={() => handleEdit(product.id)} />
-              {/* <Button title="Delete" onPress={() => handleDelete(product.id)} /> */}
-            </View>
-            <View>
-              <Button title="Delete" onPress={() => handleDelete(product.id)} />
+            <View style={styles.adminActionsContainer}>
+              <View style={styles.adminActions}>
+                <Button title="Edit" onPress={() => handleEdit(product.id)} />
+                {/* <Button title="Delete" onPress={() => handleDelete(product.id)} /> */}
+              </View>
+              <View style={styles.adminActions}>
+                <Button
+                  title="Delete"
+                  onPress={() => handleDelete(product.id)}
+                />
+              </View>
             </View>
           </>
         )}
-        <Product
-          {...product}
-          onPress={() => {
-            navigation.navigate("ProductDetails", {
-              productId: product.id,
-            });
-          }}
-        />
       </View>
     );
   }
 
   return (
     <View style={styles.container}>
-       {Platform.OS === 'web' && (
-      <TextInput
-        style={styles.searchInput}
-        placeholder="Search products"
-        value={searchQuery}
-        onChangeText={setSearchQuery}
-      />
-      )}
+      <View>
+        {Platform.OS === "web" && (
+          <View style={styles.searchInputContainer}>
+            <TextInput
+              style={styles.searchInput}
+              placeholder="Search products"
+              value={searchQuery}
+              onChangeText={setSearchQuery}
+            />
+          </View>
+        )}
+      </View>
       <FlatList
         style={styles.productsList}
         contentContainerStyle={styles.productsListContainer}
@@ -114,28 +132,47 @@ const ProductList = ({ navigation, route }) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-  },
-  productsList: {
-    backgroundColor: "#eeeeee",
-    flex: 1,
-  },
+  // productsList: {
+  //   // flex: 1,
+  //   width: "100%", // Occupy full width
+  //   backgroundColor: "#eeeeee",
+  //     },
+
   productsListContainer: {
-    paddingVertical: 8,
-    // marginHorizontal: 8,
+    // paddingVertical: 8,
+    // paddingHorizontal: 8,
+    // flexDirection: "row",
+    // flexWrap: 'wrap',
+    // alignSelf: 'flex-start',
+    // overflow: "hidden",
+    // marginHorizontal: "10%",
+    // justifyContent: "center",
+    // alignItems:  "center",
   },
   productContainer: {
-    flex: 1,
-    flexDirection: "row",
-    // justifyContent: 'space-between',
-    marginBottom: 8,
+    margin: 20,
+    width: "30%",
+    flexWrap: "wrap",
+    // overflow: "hidden",
   },
-  adminActions: {
-    flexDirection: "column",
+  productItem: {
+    margin: 40,
+    // width: 100,
+  },
+  adminActionsContainer: {
+    flexDirection: "row",
     justifyContent: "space-between",
-    marginBottom: 2,
+    marginTop: 8,
+  },
+  button: {
+    backgroundColor: "#4285F4",
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    borderRadius: 4,
+  },
+
+  searchInputContainer: {
+    paddingHorizontal: 20,
   },
   searchInput: {
     height: 40,
@@ -146,4 +183,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ProductList;
+export default withNetworkConnectivity(ProductList);

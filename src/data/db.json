@@ -2,44 +2,44 @@
   "admins": [
     {
       "name": "Anil Sidhu",
-      "email": "anil@seller.com",
+      "email": "anil@admin.com",
       "password": "abc@123",
       "id": 1
     },
     {
       "name": "Renu Sidhu",
-      "email": "renu@seller.com",
+      "email": "renu@admin.com",
       "password": "abc@123",
       "id": 2
     },
     {
       "name": "Sheetal",
       "password": "abc@123",
-      "email": "sheetal@seller.com",
+      "email": "sheetal@admin.com",
       "id": 3
     },
     {
       "name": "Komal",
       "password": "abc@123",
-      "email": "komal@seller.com",
+      "email": "komal@admin.com",
       "id": 4
     },
     {
       "name": "Komal",
       "password": "abc@123",
-      "email": "komal@seller.com",
+      "email": "komal@admin.com",
       "id": 5
     },
     {
       "name": "Disha",
       "password": "abc@123",
-      "email": "disha@seller.com",
+      "email": "disha@admin.com",
       "id": 6
     },
     {
       "name": "alexa",
       "password": "abc@123",
-      "email": "alexa@seller.com",
+      "email": "alexa@admin.com",
       "id": 7
     }
   ],
@@ -136,6 +136,12 @@
       "email": "pankaj@user.com",
       "password": "abc@123",
       "id": 4
+    },
+    {
+      "name": "gagan",
+      "email": "gagan@user.com",
+      "password": "abc@123",
+      "id": 5
     }
   ],
   "cart": []

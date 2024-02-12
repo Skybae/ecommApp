@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import ProductsService from "./ProductsService";
 import { Alert } from "react-native-web";
+import withNetworkConnectivity from "./withNetworkConnectivity";
 
 const EditProduct = ({navigation, route }) => {
   const { productId } = route.params;
@@ -154,4 +155,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default EditProduct;
+export default withNetworkConnectivity(EditProduct);

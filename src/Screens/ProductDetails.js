@@ -10,8 +10,9 @@ import {
   } from 'react-native';
 import ProductsService from './ProductsService';
 import { CartContext } from './CartContext';
+import { Dimensions } from 'react-native-web';
 
-
+const windowWidth = Dimensions.get('window').width;
 
 
 export function ProductDetails({route}) {
@@ -40,7 +41,7 @@ export function ProductDetails({route}) {
         
         console.log(productData)
       } catch (error) {
-        // Handle error
+       
       }
     };
 
@@ -56,11 +57,13 @@ export function ProductDetails({route}) {
 //     );
 //   }
   return (
+    <View style={styles.container}>
     <SafeAreaView>
       <ScrollView>
+        <View style={styles.card}>
         <Image
           style={styles.image}
-          source={product.image}
+          source={product.imageUrl}
         />
         <View style={styles.infoContainer}>
           <Text style={styles.name}>{product.name}</Text>
@@ -71,8 +74,10 @@ export function ProductDetails({route}) {
             title="Add to cart"
             / >
         </View>
+        </View>
       </ScrollView>
     </SafeAreaView>
+    </View>
   );
 }
 const styles = StyleSheet.create({
@@ -81,6 +86,12 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     shadowOpacity: 0.2,
     shadowRadius: 4,
+    // textAlign:'center',
+    // alignContent: "center",
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    width: "100%",
+    height: "40%",
     shadowColor: 'black',
     shadowOffset: {
       height: 0,
@@ -89,10 +100,20 @@ const styles = StyleSheet.create({
     elevation: 1,
     marginVertical: 20,
   },
+  container: {
+    // justifyContent: 'center',
+    // alignContent: "center",
+    // flex: 1,
+    // alignItems: "center",
+  },
   image: {
-    height: 300,
+    height: 400,
     width: '100%'
   },
+  // image: {
+  //   width: '100%',
+  //   height: windowWidth * 0.50, // Maintain aspect ratio
+  // },
   infoContainer: {
     padding: 16,
   },

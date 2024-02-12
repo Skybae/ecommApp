@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 import ProductsService from "./ProductsService";
+import withNetworkConnectivity from './withNetworkConnectivity';
 // import * as ImagePicker from 'expo-image-picker';
 
 const AddProduct = ({ navigation }) => {
@@ -136,4 +137,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AddProduct;
+export default withNetworkConnectivity(AddProduct) ;

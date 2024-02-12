@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
+import withNetworkConnectivity from "./withNetworkConnectivity";
 
 const SignInScreen = () => {
   const navigation = useNavigation();
@@ -77,7 +78,7 @@ const SignInScreen = () => {
   );
 };
 
-export default SignInScreen;
+export default withNetworkConnectivity(SignInScreen);
 
 const styles = StyleSheet.create({
   container: {
